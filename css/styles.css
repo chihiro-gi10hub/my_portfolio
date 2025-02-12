@@ -1,124 +1,215 @@
 @charset "UTF-8";
 body {
-  font-family: "LinotypeUnivers-430Regular", "Gothic Medium BBB", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  margin: 0;
+  font-family: "LinotypeUnivers-430Regular", "Gothic Medium BBB", "游ゴシック", "Yu Gothic", "YuGothic", sans-serif;
   background-color: #efeff0;
+  margin: 0;
 }
 
 main {
-  height: 600px;
-  margin: 0 auto;
-}
-
-.nav-link {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-}
-.nav-link li {
-  height: 200px;
-  width: 200px;
-  display: flex; /* flexboxを使って中央に配置 */
-  justify-content: center; /* 水平方向に中央揃え */
-  align-items: center; /* 垂直方向に中央揃え */
-}
-.nav-link a {
-  font-family: "Noto Serif Todhri", serif;
-  font-weight: 400;
-  font-style: normal;
-  display: flex; /* a要素内でもflexboxを使う */
-  justify-content: center; /* a要素内のテキストを水平方向に中央揃え */
-  align-items: center; /* a要素内のテキストを垂直方向に中央揃え */
-  text-align: center;
-  color: #000; /* テキストを中央に */
-  font-weight: bold;
-  font-size: 25px;
-  position: relative; /* 相対位置指定 */
-  text-decoration: none; /* 下線を消す */
-}
-.nav-link a::after {
-  content: ""; /* 疑似要素を追加 */
-  position: absolute; /* 絶対位置指定 */
-  left: 0; /* 左端から配置 */
-  bottom: 0; /* 下端から配置 */
-  width: 0; /* 横幅0 */
-  height: 2px; /* 高さ2px */
-  background-color: #000; /* 背景色を黒に */
-  transition: width 0.3s ease, left 0.4s ease; /* 変化をスムーズに */
-}
-.nav-link a:hover {
-  opacity: 0.5;
-}
-.nav-link a:hover::after {
   width: 100%;
-  left: 0;
-}
-.nav-link a:active {
-  font-size: 20px;
-  transition: transform 0.1s ease, font-size 0.1s ease, box-shadow 0.1s ease; /* 変化をスムーズに */
+  height: 100%;
+  margin: 0 auto;
 }
 
 .top-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 3rem;
 }
 
-.top-text {
-  display: inline-block;
-}
 .top-text h1 {
-  font-size: 50px;
+  font-size: 3rem;
   margin: 0;
 }
 .top-text p {
-  font-size: 25px;
-  line-height: 80px;
+  font-size: 1rem;
+  line-height: 2.8rem;
   margin: 0;
 }
 
 .topimage-container {
-  padding-bottom: 150px 0 0 0;
-  margin-top: 100px;
+  margin-top: 2rem;
 }
-.topimage-container .top-image {
-  display: inline-block;
-  height: 450px;
+
+.top-image {
+  height: 25rem;
 }
 
 .contact-wrapper {
-  width: 1500px;
-  margin: 200px 0 0 80px;
+  margin: 5rem;
 }
 
 .contact-container {
   display: flex;
+  gap: 0.5rem;
 }
 .contact-container p {
-  font-size: 25px;
-  margin: 0 5px; /* 左右に20pxのマージンを追加 */
+  margin-bottom: 0;
+  font-size: 1.3rem;
 }
 
 .contact-icons {
-  font-size: 45px;
+  font-size: 2rem;
 }
 .contact-icons i {
   color: #000;
-  margin: 0 10px;
+  margin: 0 0.5rem;
   text-decoration: none;
+  transition: 0.3s;
 }
 .contact-icons i:hover {
-  color: #000;
   opacity: 0.5;
 }
 .contact-icons i:active {
   transform: scale(0.9); /* 押したときにアイコンが小さくなる */
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 影を付けて押した感じを強調 */
-  transition: transform 0.1s ease, font-size 0.1s ease, box-shadow 0.1s ease; /* 変化をスムーズに */
 }
 
-/*# sourceMappingURL=styles.css.map */
+@media (min-width: 671px) {
+  .nav-menupanel {
+    display: none;
+  }
+  .nav-link {
+    height: 10rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+  .nav-link li {
+    width: 10%;
+    display: flex; /* flexboxを使って中央に配置 */
+    justify-content: center; /* 水平方向に中央揃え */
+    align-items: center; /* 垂直方向に中央揃え */
+  }
+  .nav-link a {
+    font-family: "Noto Serif Todhri", serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex; /* a要素内でもflexboxを使う */
+    justify-content: center; /* a要素内のテキストを水平方向に中央揃え */
+    align-items: center; /* a要素内のテキストを垂直方向に中央揃え */
+    text-align: center;
+    color: #000; /* テキストを中央に */
+    font-weight: bold;
+    font-size: 25px;
+    position: relative; /* 相対位置指定 */
+    text-decoration: none; /* 下線を消す */
+  }
+  .nav-link a::after {
+    content: ""; /* 疑似要素を追加 */
+    position: absolute; /* 絶対位置指定 */
+    left: 0; /* 左端から配置 */
+    bottom: 0; /* 下端から配置 */
+    width: 0; /* 横幅0 */
+    height: 2px; /* 高さ2px */
+    background-color: #000; /* 背景色を黒に */
+    transition: width 0.3s ease, left 0.4s ease; /* 変化をスムーズに */
+  }
+  .nav-link a:hover {
+    opacity: 0.5;
+  }
+  .nav-link a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  .nav-link a:active {
+    font-size: 20px;
+    transition: transform 0.1s ease, font-size 0.1s ease, box-shadow 0.1s ease; /* 変化をスムーズに */
+  }
+}
+@media (max-width: 670px) {
+  .nav-link {
+    display: none; /* 通常のメニューは非表示 */
+  }
+  .btn-menu {
+    display: block; /* メニューボタンを表示 */
+    text-align: right;
+    margin-right: 1.3rem;
+    margin-top: 1.3rem;
+  }
+  #menu-panel {
+    width: 35%; /* メニューが画面幅全体を占めるように */
+    height: 100%;
+    position: fixed; /* 固定表示 */
+    top: 0;
+    right: 0; /* 画面右上に表示 */
+    transform: translateX(100vw); /* 初期状態で右に隠れる */
+    transition: transform 0.4s ease-out; /* アニメーション効果 */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+  }
+  .menu-panel-link {
+    margin-top: 5rem;
+  }
+  .menu-panel-link li {
+    font-family: "Noto Serif Todhri", serif;
+    list-style: none;
+    margin-bottom: 3rem;
+  }
+  .menu-panel-link a {
+    font-size: 1.4rem;
+    color: #efeff0;
+    text-decoration: none; /* 下線を消す */
+    position: relative; /* 相対位置指定 */
+  }
+  .menu-panel-link a::after {
+    content: ""; /* 疑似要素を追加 */
+    position: absolute; /* 絶対位置指定 */
+    left: 0; /* 左端から配置 */
+    bottom: 0; /* 下端から配置 */
+    width: 0; /* 横幅0 */
+    height: 2px; /* 高さ2px */
+    background-color: #efeff0;
+    transition: width 0.3s ease, left 0.4s ease; /* 変化をスムーズに */
+  }
+  .menu-panel-link a:hover {
+    opacity: 0.8;
+  }
+  .menu-panel-link a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  .menu-panel-link a:active {
+    font-size: 1.3rem;
+    transition: transform 0.1s ease, font-size 0.1s ease, box-shadow 0.1s ease; /* 変化をスムーズに */
+  }
+  .top-wrapper {
+    display: flex;
+    flex-direction: column; /* 縦方向に並べる */
+    justify-content: center;
+    margin: 3rem 3rem 0 3rem;
+  }
+  .top-text h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .top-text p {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+  }
+  .topimage-container {
+    margin: 0 1.5rem 0 0;
+  }
+  .topimage-container .top-image {
+    height: 18rem;
+  }
+  .contact-wrapper {
+    margin: 0;
+  }
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-container p {
+    font-size: 0.9rem;
+  }
+  .contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}/*# sourceMappingURL=styles.css.map */
